@@ -1,9 +1,14 @@
 import React from "react";
 
-class HelloWorld extends React.Component {
+class Hello extends React.Component {
   render() {
-    return <div>Hello World</div>;
+    return (
+      <div>
+        There are {this.props.people} people, of which {this.props.men} are men.
+        And also {this.props.women} are women.
+      </div>
+    );
   }
 }
 
-export default HelloWorld;
+export default Hello;

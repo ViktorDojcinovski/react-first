@@ -1,9 +1,11 @@
 import React from "react";
 
-function GoodBye() {
-  let goodBye = "Goodbye";
-
-  return <div>{goodBye}</div>;
+function GoodBye(props) {
+  return (
+    <>
+      <div>GoodBye world {props.people}</div>
+    </>
+  );
 }
 
 export default GoodBye;
