@@ -1,22 +1,36 @@
-import Hello from "./HelloWorld.component";
-import GoodBye from "./GoodBye.component";
+import React, { Component } from "react";
 
-function App() {
-  let people = "7 billion";
-  const men = "3.5 billion";
-  const a = [1, 2, 3];
-  const o = {
-    a: 1,
-    b: 2,
-    c: 3,
-  };
+import HelloWorld from "./HelloWorld.component";
 
-  return (
-    <>
-      <Hello people={people} men={men} a={a} o={o} />
-      <GoodBye population={people}></GoodBye>
-    </>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      people: "7 billion",
+      men: "3.5 billion",
+      children: "",
+    };
+
+    this.getChildren = this.getChildren.bind(this);
+  }
+
+  getChildren(children) {
+    console.log("There are " + children + " children in the world");
+    this.setState({ children: children });
+  }
+
+  render() {
+    return (
+      <>
+        <HelloWorld
+          people={this.state.people}
+          men={this.state.men}
+          getChildren={this.getChildren}
+        />
+      </>
+    );
+  }
 }
 
 export default App;
