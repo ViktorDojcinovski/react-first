@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function GoodBye(props) {
+  const [people, setPeople] = useState({
+    men: 1,
+    women: "7264",
+    children: "2.7 billion",
+  });
+  const [counter, setCounter] = useState(1);
+
+  useEffect(() => {
+    setPeople({ ...people, children: "2.6 billion" });
+  }, [people]);
+
   function onClickHandler() {
     console.log("You clicked on the div tag in the GB component!");
+
+    console.log(people);
+
+    //setPeople({ ...people, children: "2.6 billion" });
   }
 
   return (

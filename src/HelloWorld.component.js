@@ -24,10 +24,18 @@ class HelloWorld extends React.Component {
       children: "2 billion",
     }
      */
+
+    setTimeout(() => {
+      this.props.removeGoodBye();
+    }, 5000);
   }
 
   componentDidUpdate() {
     console.log("ComponentDidUpdate method called!");
+  }
+
+  componentWillUnmount() {
+    console.log("ComponentWillUnmount method called on HelloWorld component!");
   }
 
   onClickHandler() {
