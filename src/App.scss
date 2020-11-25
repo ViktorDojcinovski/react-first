@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,28 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+$base-color: red;
+
+@mixin font-rules {
+  font-size: 20px;
+  color: grey;
+  font-weight: bold;
+}
+
+.container {
+  @include font-rules();
+  max-width: 800px;
+
+  a {
+    color: $base-color;
+    &:hover {
+      color: green;
+    }
+  }
+}
+
+.wrapper {
+  @include font-rules;
 }

@@ -8,9 +8,7 @@ function GoodBye(props) {
   });
   const [counter, setCounter] = useState(1);
 
-  useEffect(() => {
-    setPeople({ ...people, children: "2.6 billion" });
-  }, [people]);
+  useEffect(() => {});
 
   function onClickHandler() {
     console.log("You clicked on the div tag in the GB component!");

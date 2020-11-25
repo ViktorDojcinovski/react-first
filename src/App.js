@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import HelloWorld from "./HelloWorld.component";
 import GoodBye from "./GoodBye.component";
 
+import "./App.scss";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +31,8 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="container">
+        <a href="https://google.com">Google</a>
         <HelloWorld
           people={this.state.people}
           men={this.state.men}
@@ -41,7 +44,7 @@ class App extends Component {
             <GoodBye>This is GoodBye component!</GoodBye>
           </>
         )}
-      </>
+      </div>
     );
   }
 }

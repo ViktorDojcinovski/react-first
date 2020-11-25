@@ -46,7 +46,7 @@ class HelloWorld extends React.Component {
     console.log("Render method called!");
     return (
       <>
-        <div>
+        <div className={this.props.className}>
           There are {this.props.people} people, of which {this.props.men} are
           men. And also {this.state.women} are women.
           <button onClick={this.onClickHandler}>
